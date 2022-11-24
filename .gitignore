@@ -20,6 +20,10 @@ build
 # other
 eclipse
 run
+create
+flywheel
+simi
+tterrag
 
 # Files from Forge MDK
 forge*changelog.txt
