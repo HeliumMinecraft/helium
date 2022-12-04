@@ -4,17 +4,23 @@ An advanced modding lib for Minecraft
 # Build
 
 
-Helium is maded on Java, you can Make Mods with these instructions:
+Helium is made on Java, you can Make Mods with these instructions:
 
 
-1- Download [helium example mod](https://www.github.com/HeliumMinecraft/helium-example-mod) 
+Download [helium example mod](https://www.github.com/HeliumMinecraft/helium-example-mod) 
 
-2- Download [eclipse](https://eclipse.org)
+If you are using Eclipse:
 
-3- Run gradlew setupMinecraft if you are on Windows or ./gradlew setupMinecraft if you are on MacOS or Linux
+Run gradlew eclipse
 
-4- Run gradlew eclipse if you are on Windows or ./gradlew eclipse if you are on MacOS or Linux
+Import .classpath and .project to your Eclipse workspace
 
-5- Now you can make mods!
+If you are using IntelliJ:
+
+Go to File, go to Open and go to your project and select build.gradle
+
+Select the "Import as Project" option
+
+ Now you can make mods!
 
 

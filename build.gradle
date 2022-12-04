@@ -122,50 +122,60 @@ url "https://maven.fabricmc.net"
 }
 
   configurations {
-        installer {
-            transitive = true //I changed the line because i need the dependencies
-        }
-        api.extendsFrom(installer)
-        fmllauncherImplementation.extendsFrom(installer, implementation)
+
+      installer.extendsFrom(implementation,compile)
+
     }
     dependencies {
     //Some stuff are of the Forge modloader
     minecraft 'net.minecraft:client:1.19.2'
-        installer 'org.ow2.asm:asm:9.1'
-        installer 'org.ow2.asm:asm-commons:9.1'
-        installer 'org.ow2.asm:asm-tree:9.1'
-        installer 'org.ow2.asm:asm-util:9.1'
-        installer 'org.ow2.asm:asm-analysis:9.1'
-        installer 'cpw.mods:modlauncher:10.0.8'
-        installer 'cpw.mods:grossjava9hacks:2.0.7'
-        installer 'cpw.mods:securejarhandler:2.1.4'
-        installer 'cpw.mods:bootstraplauncher:1.1.2'
-        installer 'net.minecraftforge:accesstransformers:3.0.1'
-        installer 'org.antlr:antlr4-runtime:4.9.1' //Dep of AccessTransformer
+        implementation 'org.ow2.asm:asm:9.1'
+        implementation 'org.ow2.asm:asm-commons:9.1'
+        implementation 'org.ow2.asm:asm-tree:9.1'
+        implementation 'org.ow2.asm:asm-util:9.1'
+        implementation 'org.ow2.asm:asm-analysis:9.1'
 
-        installer 'com.electronwill.night-config:core:3.6.3'
-        installer 'com.electronwill.night-config:toml:3.6.3'
-        installer 'com.electronwill.night-config:json:3.6.3'
+implementation "cpw.mods:bootstraplauncher:1.1.2"
+        compileOnly 'cpw.mods:modlauncher:10.0.8'
+        implementation 'net.minecraftforge:accesstransformers:3.0.1'
+        implementation 'org.antlr:antlr4-runtime:4.9.1' //Dep of AccessTransformer
+implementation 'com.mojang:brigadier:1.0.18'
+        implementation 'com.mojang:datafixerupper:5.0.28'
+        implementation 'com.mojang:blocklist:1.0.10'
+        implementation 'com.mojang:patchy:2.2.10'
+        implementation 'com.mojang:javabridge:1.1.23'
+        implementation 'com.mojang:text2speech:1.13.9'
+        compileOnly 'com.mojang:authlib:3.11.50'
+        implementation 'com.electronwill.night-config:core:3.6.3'
+        implementation 'com.electronwill.night-config:toml:3.6.3'
+        implementation 'com.electronwill.night-config:json:3.6.3'
+        implementation 'io.netty:netty-all:4.1.77.Final'
+        implementation 'it.unimi.dsi:dsiutils:2.7.2'
+        implementation 'it.unimi.dsi:fastutil:8.5.6'
 
-        installer 'org.jline:jline:3.12.+'
-        installer 'org.apache.maven:maven-artifact:3.6.3'
-        installer 'net.jodah:typetools:0.8.3'
-        installer 'org.apache.logging.log4j:log4j-api:2.18.1' //TODO: Unpin in 1.18.1 or when Mojang bumps the Log4J version
-        installer 'org.apache.logging.log4j:log4j-core:2.18.1' //TODO: Unpin in 1.18.1 or when Mojang bumps the Log4J version
-        installer 'org.apache.logging.log4j:log4j-slf4j18-impl:2.18.1' //TODO: Unpin in 1.18.1 or when Mojang bumps the Log4J version
-        installer 'com.mojang:logging:1.0.0'
-        installer 'net.minecrell:terminalconsoleappender:1.2.0'
-        installer 'net.sf.jopt-simple:jopt-simple:5.0.4'
-        installer 'org.spongepowered:mixin:0.8.4'
+        implementation 'org.jline:jline:3.12.+'
+        implementation 'org.apache.maven:maven-artifact:3.6.3'
+        implementation 'net.jodah:typetools:0.8.3'
+        implementation 'org.apache.logging.log4j:log4j-api:2.17.1'
+
+        implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+        implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.17.1'
+        implementation 'org.slf4j:slf4j-api:1.8.0-beta4'
+
+        implementation 'com.mojang:logging:1.0.0'
+        implementation 'net.minecrell:terminalconsoleappender:1.2.0'
+        implementation 'net.sf.jopt-simple:jopt-simple:5.0.4'
+        implementation 'org.spongepowered:mixin:0.8.4'
+        installer 'org.codehaus.plexus:plexus-archiver:2.1'
         // This is org.openjdk.nashorn:nashorn-core:15.1.1 repackaged so it doesn't crash on JREs < 15.
         // See: https://github.com/LexManos/NashornLegacyPackager
-        installer 'net.minecraftforge:nashorn-core-compat:15.1.1.1'
-        fmllauncherImplementation 'com.google.guava:guava:21.0'
-        fmllauncherImplementation 'com.google.code.gson:gson:2.8.0'
-        fmllauncherImplementation 'org.lwjgl:lwjgl:3.3.1'
-        fmllauncherImplementation 'org.lwjgl:lwjgl-glfw:3.3.1'
-        fmllauncherImplementation 'org.lwjgl:lwjgl-opengl:3.3.1'
-        fmllauncherImplementation 'org.lwjgl:lwjgl-stb:3.3.1'
+        implementation 'net.minecraftforge:nashorn-core-compat:15.1.1.1'
+        implementation 'com.google.guava:guava:21.0'
+        implementation 'com.google.code.gson:gson:2.8.0'
+        implementation 'org.lwjgl:lwjgl:3.3.1'
+        implementation 'org.lwjgl:lwjgl-glfw:3.3.1'
+        implementation 'org.lwjgl:lwjgl-opengl:3.3.1'
+       implementation 'org.lwjgl:lwjgl-stb:3.3.1'
         testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
         testImplementation 'org.junit.vintage:junit-vintage-engine:5.+'
         testImplementation 'org.opentest4j:opentest4j:1.2.0' // needed for junit 5
