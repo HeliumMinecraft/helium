@@ -124,11 +124,12 @@ url "https://maven.fabricmc.net"
   configurations {
 
       installer.extendsFrom(implementation,compile)
-
+mappings.extendsFrom(implementation)
     }
     dependencies {
     //Some stuff are of the Forge modloader
     minecraft 'net.minecraft:client:1.19.2'
+    mappings 'net.fabricmc:yarn:1.19.2+build.28:v2'
         implementation 'org.ow2.asm:asm:9.1'
         implementation 'org.ow2.asm:asm-commons:9.1'
         implementation 'org.ow2.asm:asm-tree:9.1'
