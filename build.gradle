@@ -196,5 +196,9 @@ publishing {
                 password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
             }
         }
+	publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
     }
 }
