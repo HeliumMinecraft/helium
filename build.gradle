@@ -117,7 +117,9 @@ url "https://maven.fabricmc.net"
 
 }
 
-
+	maven { url 'https://jitpack.io' }
+    	maven { url 'https://modmaven.dev' }
+        	maven { url 'https://maven.tterrag.com' }
 
 }
 
@@ -135,7 +137,7 @@ mappings.extendsFrom(implementation)
         implementation 'org.ow2.asm:asm-tree:9.1'
         implementation 'org.ow2.asm:asm-util:9.1'
         implementation 'org.ow2.asm:asm-analysis:9.1'
-
+  implementation 'com.github.sp614x:LegacyLauncher:master-aff3a537ee-1'
 implementation "cpw.mods:bootstraplauncher:1.1.2"
         compileOnly 'cpw.mods:modlauncher:10.0.8'
         implementation 'net.minecraftforge:accesstransformers:3.0.1'
