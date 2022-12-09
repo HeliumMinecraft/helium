@@ -1,6 +1,11 @@
 # helium
 An advanced modding lib for Minecraft
 
+[![Java CI with Gradle](https://github.com/HeliumMinecraft/helium/actions/workflows/gradle.yml/badge.svg)](https://github.com/HeliumMinecraft/helium/actions/workflows/gradle.yml)
+
+The loader uses so many projects to work. here are some projects:
+[helium-utils](https://github.com/HeliumMinecraft/Utils)
+
 # Build
 
 
