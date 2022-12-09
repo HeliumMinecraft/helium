@@ -19,7 +19,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
-	version = "${mod_version}-build.${ENV.GITHUB_RUN_NUMBER ?: 9999}"
+	version = "1.0.10"
 group = 'net.enriquitomc.mods.helium' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'helium'
 
